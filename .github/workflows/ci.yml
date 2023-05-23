@@ -20,3 +20,10 @@ jobs:
       - name: Run a one-line script
         run: docker build . -t foobar
 
+  test:
+    runs-on: ubuntu-latest
+    container: foobar
+
+    steps:
+      - name: see what is in the foo.txt file
+        run: cat /foo.txt
